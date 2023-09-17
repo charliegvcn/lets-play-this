@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Play!</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<body>
+    <h1 class="title">Home</h1>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bxs-game' ></i>
+                <div class="logo_name">Let's Play!</div>
+            </div>
+            <i class='bx bx-menu' id='btn'></i>
+        </div>
+
+        <div class="src">
+            <i class='bx bx-search' ></i>
+            <input type="text" placeholder="Search..">
+        </div>
+
+        <ul class="nav">
+            <li>
+                <a href="index.html">
+                    <i class='bx bxs-home' ></i>
+                    <span class="link_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href="account.html">
+                    <i class='bx bxs-user'></i>
+                    <span class="link_name">Account</span>
+                </a>
+                <span class="tooltip">Account</span>
+            </li>
+            <li>
+                <a href="games.html">
+                    <i class='bx bxs-joystick' ></i>
+                    <span class="link_name">Games</span>
+                </a>
+                <span class="tooltip">Games</span>
+            </li>
+            <li class="application">
+                <a href="application.html">
+                    <i class='bx bxl-apple'></i>
+                    <span class="link_name">Application</span>
+                </a>
+                <span class="tooltip">Application</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-plus-circle'></i>
+                    <span class="link_name">More Games</span>
+                </a>
+                <span class="tooltip">More Games</span>
+            </li>
+            <li class="nightBtn">
+                <a href="#">
+                    <i class='bx bxs-moon' ></i>
+                    <span class="link_name">Night Button</span>
+                </a>
+                <span class="tooltip">Night Mode</span>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li class="waw">
+                <h2 class="wawh2">What is Let's Play! ?</h2>
+                <h3 class="wawh3">Let's Play! is a site where you can:<br />
+                    play and download games create on my own,<br />
+                    use application and more...<br />
+                    all the fonctionality are on Beta<br />
+                    but everythings works normally.<br />
+                    In the sidebar there are many button,<br />
+                    a home button, to go on this page,<br />
+                    an account button to create an account or login,<br />
+                    a games button to play games,<br />
+                    an application button to use some application features,<br />
+                    a more games button where you can find more game but to download<br />
+                    and a night button to change the color of the background<br/>
+                    Enjoy !
+                </h3>
+            </li>
+            <li>
+                <h2 class="wawh21">All features:</h2>
+                <h3 class="wawh31">
+                    Games:
+                </h3>
+                <h3 class="wawh32">
+                    none</br>
+                <h3 class="wawh33">
+                    Applications:
+                </h3>
+                <h3 class="wawh34">
+                    Calculette</br>
+                </h3>
+            </li>
+        </ul>
+    </div>
+    <script>
+        let btn = document.querySelector('#btn');
+        let sidebar = document.querySelector('.sidebar');
+        let srcBtn = document.querySelector('.bx-search');
+
+        btn.onclick = function(){
+            sidebar.classList.toggle('active');
+        }
+        srcBtn.onclick = function(){
+            sidebar.classList.toggle('active');
+        }
+    </script>
+    <script>
+        // Sélectionnez le bouton
+        let nightBtn = document.querySelector('.nightBtn');
+    
+        // Sélectionnez le body
+        let body = document.body;
+    
+        // Variable pour suivre l'état actif/inactif
+        let isNightMode = false;
+    
+        // Fonction pour basculer entre le mode nuit et le mode jour
+        function toggleNightMode() {
+            isNightMode = !isNightMode; // Inverse l'état actif/inactif
+    
+            // Mettez à jour le style du body en fonction de l'état
+            if (isNightMode) {
+                body.style.backgroundColor = '#606060';
+            } else {
+                body.style.backgroundColor = '#ffeccf';
+            }
+        }
+    
+        // Ajoutez un gestionnaire d'événements pour le clic sur le bouton
+        nightBtn.addEventListener('click', toggleNightMode);
+    </script>
+    
+</body>
+</html>

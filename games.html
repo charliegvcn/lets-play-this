@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Play!</title>
+    <link rel="stylesheet" href="css/games.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <h1 class="title">Games</h1>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bxs-game' ></i>
+                <div class="logo_name">Let's Play!</div>
+            </div>
+            <i class='bx bx-menu' id='btn'></i>
+        </div>
+
+        <div class="src">
+            <i class='bx bx-search' ></i>
+            <input type="text" placeholder="Search..">
+        </div>
+
+        <ul class="nav">
+            <li>
+                <a href="index.html">
+                    <i class='bx bxs-home' ></i>
+                    <span class="link_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href="account.html">
+                    <i class='bx bxs-user'></i>
+                    <span class="link_name">Account</span>
+                </a>
+                <span class="tooltip">Account</span>
+            </li>
+            <li>
+                <a href="games.html">
+                    <i class='bx bxs-joystick' ></i>
+                    <span class="link_name">Games</span>
+                </a>
+                <span class="tooltip">Games</span>
+            </li>
+            <li class="application">
+                <a href="application.html">
+                    <i class='bx bxl-apple'></i>
+                    <span class="link_name">Application</span>
+                </a>
+                <span class="tooltip">Application</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-plus-circle'></i>
+                    <span class="link_name">More Games</span>
+                </a>
+                <span class="tooltip">More Games</span>
+            </li>
+            <li class="nightBtn">
+                <a href="#">
+                    <i class='bx bxs-moon' ></i>
+                    <span class="link_name">Night Button</span>
+                </a>
+                <span class="tooltip">Night Mode</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="games">
+        <ul class="games_ul">
+            <li>
+                <button class="pacman_game">
+                    <a href="pacman.html" target="_blank">
+                        <img src="img/pacman.jpg">
+                    </a>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <script>
+        let btn = document.querySelector('#btn');
+        let sidebar = document.querySelector('.sidebar');
+        let srcBtn = document.querySelector('.bx-search');
+
+        btn.onclick = function(){
+            sidebar.classList.toggle('active');
+        }
+        srcBtn.onclick = function(){
+            sidebar.classList.toggle('active');
+        }
+    </script>
+    <script>
+        // Sélectionnez le bouton
+        let nightBtn = document.querySelector('.nightBtn');
+    
+        // Sélectionnez le body
+        let body = document.body;
+    
+        // Variable pour suivre l'état actif/inactif
+        let isNightMode = false;
+    
+        // Fonction pour basculer entre le mode nuit et le mode jour
+        function toggleNightMode() {
+            isNightMode = !isNightMode; // Inverse l'état actif/inactif
+    
+            // Mettez à jour le style du body en fonction de l'état
+            if (isNightMode) {
+                body.style.backgroundColor = '#606060';
+            } else {
+                body.style.backgroundColor = '#ffeccf';
+            }
+        }
+    
+        // Ajoutez un gestionnaire d'événements pour le clic sur le bouton
+        nightBtn.addEventListener('click', toggleNightMode);
+    </script>
+</body>
+</html>
